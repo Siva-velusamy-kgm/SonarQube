@@ -30,3 +30,4 @@ EXPOSE 8080
 WORKDIR ${SONARQUBE_SCANNER_HOME}
 
 ENTRYPOINT ["/launch.sh"]
+RUN ["chmod", "+x", "/launch.sh"]
