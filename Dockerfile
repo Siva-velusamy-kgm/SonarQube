@@ -24,10 +24,7 @@ RUN apt-get update \
 ENV PATH $PATH:$SONARQUBE_SCANNER_BIN
 
 COPY launch.sh /
-
-EXPOSE 8080
-
 WORKDIR ${SONARQUBE_SCANNER_HOME}
 
 ENTRYPOINT ["/launch.sh"]
-RUN ["chmod", "+x", "/launch.sh"]
+
